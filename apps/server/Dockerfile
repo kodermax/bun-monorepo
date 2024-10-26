@@ -5,7 +5,7 @@ WORKDIR /app
 # Cache packages
 COPY package.json package.json
 COPY bun.lockb bun.lockb
-
+COPY turbo.json turbo.json
 COPY /apps/server/package.json ./apps/server/package.json
 COPY /packages/error/package.json ./packages/error/package.json
 COPY /tooling/typescript/package.json ./tooling/typescript/package.json
@@ -16,7 +16,7 @@ COPY /packages/error ./packages/error
 COPY /tooling/typescript ./tooling/typescript
 
 ENV NODE_ENV=production
-
+RUN bun run build
 RUN bun build --compile --minify-whitespace --minify-syntax --target bun --outfile server ./apps/server/src/index.ts
 
 FROM gcr.io/distroless/base
