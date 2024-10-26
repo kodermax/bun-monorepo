@@ -1,0 +1,8 @@
+services:
+  server:
+    build:
+      dockerfile: ./apps/server/Dockerfile
+    container_name: server
+    restart: always
+    ports:
+      - "8000:8000"
