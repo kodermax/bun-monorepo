@@ -1,0 +1,33 @@
+{
+  "name": "@acme/error",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./index.ts"
+    }
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@acme/tsconfig": "workspace:*",
+    "tsup": "8.3.5",
+    "typescript": "5.6.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

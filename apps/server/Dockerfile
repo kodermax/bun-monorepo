@@ -7,12 +7,13 @@ COPY package.json package.json
 COPY bun.lockb bun.lockb
 
 COPY /apps/server/package.json ./apps/server/package.json
-
+COPY /packages/error/package.json ./packages/error/package.json
+COPY /tooling/typescript/package.json ./tooling/typescript/package.json
 RUN bun install
 
 COPY /apps/server ./apps/server
-
-
+COPY /packages/error ./packages/error
+COPY /tooling/typescript ./tooling/typescript
 
 ENV NODE_ENV=production
 

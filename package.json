@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "@acme/root",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -18,6 +18,7 @@
   "packageManager": "bun@1.1.33",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "tooling/*"
   ]
 }
